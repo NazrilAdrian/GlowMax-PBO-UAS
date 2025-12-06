@@ -8,9 +8,7 @@
 - [Fitur Utama](#fitur-utama)
 - [Konsep OOP yang Digunakan](#konsep-oop-yang-digunakan)
 - [Tech Stack](#tech-stack)
-- [Instalasi & Setup](#instalasi--setup)
 - [Penggunaan Aplikasi](#penggunaan-aplikasi)
-- [Struktur Database](#struktur-database)
 
 
 
