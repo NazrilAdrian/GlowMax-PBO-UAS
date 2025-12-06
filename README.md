@@ -5,17 +5,27 @@
 ### Halaman Animation Intro Aplikasi
 ![Intro Animation](GlowMaxApp/Preview%20Glowmax/Intro-animation.png)
 
+---
+
 ### Dashboard Utama
 ![Main Dashboard](GlowMaxApp/Preview%20Glowmax/Main.png)
+
+---
 
 ### Perhitungan BMI
 ![BMI Result](GlowMaxApp/Preview%20Glowmax/Result-BMI.png)
 
+---
+
 ### Rekomendasi Workout
 ![Workout Plan](GlowMaxApp/Preview%20Glowmax/Workout.png)
 
+---
+
 ### Rekomendasi Diet & Kalori
 ![Diet Recommendation](GlowMaxApp/Preview%20Glowmax/Diet.png)
+
+---
 
 ### Rekomendasi Skincare
 ![Skincare Routine](GlowMaxApp/Preview%20Glowmax/Skincare.png)
@@ -137,7 +147,7 @@ ArrayList<WorkoutItem> workouts = new ArrayList<>();
 ---
 
 ## 💻 Tech Stack
-_________________________________________________________________________
+
 | Komponen                  | Teknologi                                 |
 |---------------------------|-------------------------------------------|
 | **Bahasa Pemrograman**    | Java 11+                                  |
@@ -147,10 +157,10 @@ _________________________________________________________________________
 | **Database Management**   | phpMyAdmin                                |
 | **Database Driver**       | JDBC Connector                            |
 | **Arsitektur**            | Object-Oriented Programming (OOP)         |
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+---
 
 ## 📱 Penggunaan Aplikasi
-
 ### Alur Penggunaan
 
 1. **Login / Registrasi**   → Sistem membuat user baru di database
@@ -163,3 +173,4 @@ _________________________________________________________________________
 
 ✨ *Keep Grow and Glow, stay Healthy!* ✨
 
+---
