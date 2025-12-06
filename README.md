@@ -15,12 +15,12 @@ GlowMax - Health & Skincare Tracking Application
 
 |            Nama           |      NPM      |
 |---------------------------|---------------|
-| **Syahid Ahmad Yasin**    | 2410631170170 |
+| **Muhammad Rizky Rajabi** | 2410631170039 |
 | **Nazril Adrian**         | 2410631170097 | 
 | **Rafli Rizki Fadillah**  | 2410631170099 |
-| **Muhammad Rizky Rajabi** | 2410631170039 | 
+| **Syahid Ahmad Yasin**    | 2410631170170 | 
 
----
+---  
 
 ## 🎯 Tentang Project
 
