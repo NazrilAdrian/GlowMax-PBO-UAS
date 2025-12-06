@@ -3,20 +3,22 @@
 ## 📸 Preview Aplikasi
 
 ### Halaman Animation Intro Aplikasi
-![Intro Animation](Preview%20Glowmax/Intro-animation.png)
+![Intro Animation](GlowMaxApp/Preview%20Glowmax/Intro-animation.png)
 
-### Main Dashboard & Result BMI Calculation
-![Main Dashboard](Preview%20Glowmax/Main.png)
-![BMI Result](Preview%20Glowmax/Result-BMI.png)
+### Dashboard Utama
+![Main Dashboard](GlowMaxApp/Preview%20Glowmax/Main.png)
+
+### Perhitungan BMI
+![BMI Result](GlowMaxApp/Preview%20Glowmax/Result-BMI.png)
 
 ### Rekomendasi Workout
-![Workout Plan](Preview%20Glowmax/Workout.png)
+![Workout Plan](GlowMaxApp/Preview%20Glowmax/Workout.png)
 
 ### Rekomendasi Diet & Kalori
-![Diet Recommendation](Preview%20Glowmax/Diet.png)
+![Diet Recommendation](GlowMaxApp/Preview%20Glowmax/Diet.png)
 
 ### Rekomendasi Skincare
-![Skincare Routine](Preview%20Glowmax/Skincare.png)
+![Skincare Routine](GlowMaxApp/Preview%20Glowmax/Skincare.png)
 
 ---
 
