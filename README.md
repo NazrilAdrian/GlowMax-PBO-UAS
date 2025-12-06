@@ -1,4 +1,39 @@
-# GlowMax - Health & Skincare Tracking Application
+GlowMax - Health & Skincare Tracking Application
+
+## 📋 Daftar Isi
+- [Tim Pengembang](#tim-pengembang)
+- [Tentang Project](#tentang-project)
+- [Preview Aplikasi](#preview-aplikasi)
+- [Fitur Utama](#fitur-utama)
+- [Konsep OOP yang Digunakan](#konsep-oop-yang-digunakan)
+- [Tech Stack](#tech-stack)
+- [Penggunaan Aplikasi](#penggunaan-aplikasi)
+
+---
+
+## 👥 Tim Pengembang
+
+|            Nama           |      NPM      |
+|---------------------------|---------------|
+| **Syahid Ahmad Yasin**    | 2410631170170 |
+| **Nazril Adrian**         | 2410631170097 | 
+| **Rafli Rizki Fadillah**  | 2410631170099 |
+| **Muhammad Rizky Rajabi** | 2410631170039 | 
+
+---
+
+## 🎯 Tentang Project
+
+**GlowMax** adalah aplikasi desktop berbasis Java yang dirancang untuk membantu pengguna meningkatkan kesehatan dan penampilan fisik secara holistik. Aplikasi ini menggabungkan fitur tracking berat badan, perhitungan BMI, rekomendasi diet, panduan olahraga, dan tips perawatan kulit yang dipersonalisasi.
+
+### Latar Belakang
+- 35.5% orang berolahraga untuk memperbaiki bentuk tubuh
+- 31.1% ketidakpuasan tubuh dipengaruhi perbandingan fisik dengan orang lain
+- 89% menganggap penampilan fisik sangat penting di era modern
+
+GlowMax hadir sebagai solusi untuk memberikan panduan, rekomendasi sehat, dan tracking progres secara teratur.
+
+---
 
 ## 📸 Preview Aplikasi
 
@@ -29,40 +64,6 @@
 
 ### Rekomendasi Skincare
 ![Skincare Routine](GlowMaxApp/Preview%20Glowmax/Skincare.png)
-
----
-
-## 📋 Daftar Isi
-- [Tim Pengembang](#tim-pengembang)
-- [Tentang Project](#tentang-project)
-- [Fitur Utama](#fitur-utama)
-- [Konsep OOP yang Digunakan](#konsep-oop-yang-digunakan)
-- [Tech Stack](#tech-stack)
-- [Penggunaan Aplikasi](#penggunaan-aplikasi)
-
-
-
-## 👥 Tim Pengembang
-
-|            Nama           |      NPM      |
-|---------------------------|---------------|
-| **Syahid Ahmad Yasin**    | 2410631170170 |
-| **Nazril Adrian**         | 2410631170097 | 
-| **Rafli Rizki Fadillah**  | 2410631170099 |
-| **Muhammad Rizky Rajabi** | 2410631170039 | 
-
----
-
-## 🎯 Tentang Project
-
-**GlowMax** adalah aplikasi desktop berbasis Java yang dirancang untuk membantu pengguna meningkatkan kesehatan dan penampilan fisik secara holistik. Aplikasi ini menggabungkan fitur tracking berat badan, perhitungan BMI, rekomendasi diet, panduan olahraga, dan tips perawatan kulit yang dipersonalisasi.
-
-### Latar Belakang
-- 35.5% orang berolahraga untuk memperbaiki bentuk tubuh
-- 31.1% ketidakpuasan tubuh dipengaruhi perbandingan fisik dengan orang lain
-- 89% menganggap penampilan fisik sangat penting di era modern
-
-GlowMax hadir sebagai solusi untuk memberikan panduan, rekomendasi sehat, dan tracking progres secara teratur.
 
 ---
 
@@ -101,10 +102,9 @@ GlowMax hadir sebagai solusi untuk memberikan panduan, rekomendasi sehat, dan tr
 ## 🏗️ Konsep OOP yang Digunakan
 
 ### 1. **Encapsulation (Enkapsulasi)**
-Setiap class menyimpan data dan method yang terkait, dengan akses modifier yang tepat (private, public).
+Data user (seperti berat, tinggi, gender) dibungkus dalam class dengan access modifier private dan diakses via method setter/getter, menjaga data integrity.
 
 **Contoh:**
-class User {
 private String gender;
 private int age;
 private double height;
@@ -112,10 +112,10 @@ private double weight;
 
 public void setGender(String gender) { this.gender = gender; }
 public String getGender() { return gender; }
-}
+
 
 ### 2. **Inheritance (Pewarisan)**
-Beberapa class mewarisi dari base class untuk memaksimalkan reusability.
+Penggunaan pewarisan pada struktur UI dan komponen untuk mengurangi duplikasi kode. Diterapkan pada FadePanel extends JPanel untuk custom animation.
 
 **Contoh:**
 class Recommendation extends BaseFrame {
@@ -123,7 +123,7 @@ class Recommendation extends BaseFrame {
 }
 
 ### 3. **Polymorphism (Polimorfisme)**
-Method dengan nama sama tapi perilaku berbeda tergantung context (overriding, overloading).
+Implementasi method yang dinamis untuk berbagai jenis rekomendasi. Method dengan nama sama tapi perilaku berbeda tergantung context (overriding).
 
 **Contoh:**
 // Overriding method dari parent class
@@ -131,15 +131,15 @@ Method dengan nama sama tapi perilaku berbeda tergantung context (overriding, ov
 public void displayRecommendation() { }
 
 ### 4. **Abstraction (Abstraksi)**
-Menyembunyikan kompleksitas implementasi, hanya menampilkan interface yang penting.
+Penggunaan class abstrak dan interface untuk template dasar fitur-fitur aplikasi, menyembunyikan kompleksitas implementasi.
 
 **Contoh:**
 interface IRecommendation {
 void getRecommendation(int bmiCategory);
 }
 
-### 5. **ArrayList & Collections**
-Penggunaan `ArrayList` untuk menyimpan koleksi data (workout list, meal list, skincare products).
+### 5. **ArrayList**
+Penggunaan ArrayList untuk menyimpan koleksi data (workout list, meal list, skincare products, daily tasks).
 
 **Contoh:**
 ArrayList<WorkoutItem> workouts = new ArrayList<>();
@@ -163,6 +163,109 @@ ArrayList<WorkoutItem> workouts = new ArrayList<>();
 ## 📱 Penggunaan Aplikasi
 ### Alur Penggunaan
 
+#### 1️⃣ Launch Aplikasi
+Jalankan aplikasi dari NetBeans, IntelliJ IDEA, atau file JAR yang sudah di-build. 
+
+#### 2️⃣ Input Data Diri (Sequential UI - 7 Tahap)
+Pengguna harus mengisi data diri secara berurutan. Setiap input langsung disimpan ke database sebelum lanjut ke tahap berikutnya:
+
+| Tahap | Input     | Pilihan                                       | Database Field          |
+|-------|-----------|-----------------------------------------------|-------------------------|
+| 1     | Gender    | Male / Female                                 | gender                  |
+| 2     | Age       | 15-19 years / 20-29 years / 30+ years         | age                     |
+| 3     | Body      | Tinggi (cm) & Berat Badan (kg)                | height_cm, weight_kg    |
+| 4     | Skin Type | Normal / Oily / Dry / Combination / Sensitive | skin_type               |
+| 5     | Exercise  | Home / Equipment / Gym                        | exercise_type           |
+| 6     | Budget    | Low Budget / High Budget (Premium)            | budget_level            |
+| 7     | BMI       | Auto-calculated berdasarkan tinggi & berat    | bmi_value, bmi_category |
+
+**Output BMI Calculation:**
+|Kategori Berat Badan     | BMI Value    | Rekomendasi                                                       |
+|-------------------------|--------------|-------------------------------------------------------------------|
+|Underweight              | < 18.5       | ↑ Tingkatkan kalori & nutrisi                                     |
+|Normal / Ideal           | 18.5 - 24.9  | ✓ Pertahankan pola sehat                                          |
+|Overweight               | 25 - 29.9    | ↓ Mulai diet & olahraga rutin                                     |
+|Obese                    | ≥ 30         | ↓ Mulai diet & olahraga rutin dengan intensitas yang spesial/lebih|
+
+#### 3️⃣ Akses Dashboard Utama
+
+Setelah BMI calculation selesai, user masuk ke **Dashboard Utama** yang menampilkan:
+
+**📊 Glow Summary**
+- Status kesehatan saat ini berdasarkan BMI
+- Rekomendasi awal disesuaikan dengan kategori BMI
+- Preview statistik progress
+
+**🧭 Navigation Bar (Bottom)**
+4 icon navigasi untuk akses modul-modul utama:
+
+[🏠 Home] [💪 Workout] [🍽️ Calories] [💅 Skincare]
+
+#### 4️⃣ Gunakan Fitur Rekomendasi
+
+Dari dashboard, user bisa explore 4 module rekomendasi utama:
+
+**💪 Workout Module - Rekomendasi Program Olahraga**
+
+Rekomendasi disesuaikan dengan 2 faktor utama:
+
+| BMI Status | Exercise Type | Program Rekomendasi |
+|-----------|---------------|-------------------|
+| Underweight | Home | Bodyweight + Nutrition focus |
+| Underweight | Equipment | Light resistance training |
+| Underweight | Gym | Full facilities + bulking program |
+| Normal | Home | Maintenance bodyweight exercises |
+| Normal | Equipment | Moderate intensity training |
+| Normal | Gym | Balanced strength & cardio |
+| Overweight | Home | High-intensity bodyweight |
+| Overweight | Equipment | Cardio + resistance combo |
+| Overweight | Gym | Treadmill + strength training |
+| Obese | Home | Low-impact, gradual intensity |
+| Obese | Equipment | Beginner-friendly, supervised |
+| Obese | Gym | Professional guidance recommended |
+
+Setiap rekomendasi ditampilkan dengan:
+- Nama latihan 
+- Jadwal mingguan (Senin - Minggu)
+- Estimasi durasi per sesi
+
+---
+
+**🥗 Calories Module - Rekomendasi Diet & Meal Plan**
+
+Daily calorie goal dihitung otomatis berdasarkan BMI + breakfast breakdown untuk maksimal 4 meal times:
+
+| BMI Category | Daily Target Calories | Focus | Meal Breakdown |
+|-------------|----------------------|-------|---------------|
+| Underweight | 2500-3000 kcal | Penambahan berat | +500kcal surplus |
+| Normal | 2000-2200 kcal | Maintenance | Balanced intake |
+| Overweight | 1500-1800 kcal | Penurunan berat | -500kcal deficit |
+| Obese | 1200-1500 kcal | Significant deficit | Strict intake |
+
+Setiap meal terbagi jadi 4 kategori:
+1. **Breakfast** (Sarapan)
+2. **Lunch** (Makan Siang)
+3. **Snack** (Cemilan)
+4. **Dinner** (Makan Malam)
+
+---
+
+**💅 Skincare Module - Rekomendasi Skincare Routine**
+
+3-step morning skincare routine yang dipersonalisasi berdasarkan **Skin Type** dan **Budget Level**:
+
+Setiap skincare routine terbagi jadi 3 kategori produk:
+1. **Face Wash** (Pembersih Wajah)
+2. **Toner** (Penyeimbang pH & Hydration)
+3. **Serum** (Perawatan Intensif)
+
+Rekomendasi produk disesuaikan dengan:
+- **Jenis Kulit:** Normal / Oily / Dry / Combination / Sensitive
+- **Budget Level:** Low Budget atau Premium/High Budget
+
+---
+
+### Alur Penggunaan Secara Ringkas
 1. **Login / Registrasi**   → Sistem membuat user baru di database
 2. **Input Data Diri**      → Gender, Usia, Tinggi, Berat Badan
 3. **Pilih Preferensi**     → Tipe Kulit, Tempat Olahraga, Budget Level
